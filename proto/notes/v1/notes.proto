@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package notes.v1;
+
+option go_package = "proto/notes/v1";
+
+service NoteService {
+  rpc AddNote(AddNoteRequest) returns(AddNoteResponse);
+}
+
+message AddNoteRequest {
+  string content = 1;
+}
+
+message AddNoteResponse {
+  string content = 1;
+}
